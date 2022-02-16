@@ -17,10 +17,10 @@ public class CoffeeControllerTests {
 
     @Test
     public void testGetHome() throws Exception {
-        String expectedContent = "Welcome to the Coffee API!";
+        String expectedContent = "I love coffee!";
 
         this.mockMvcController.perform(
-                MockMvcRequestBuilders.get("/coffee"))
+                MockMvcRequestBuilders.get("/coffeelover"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(expectedContent));
 
